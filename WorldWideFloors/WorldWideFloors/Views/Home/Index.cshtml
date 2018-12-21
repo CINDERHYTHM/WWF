@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@{ var imagePath = "";
+    if (Request["photoChoice"] != null)
+    {
+        imagePath = @"images\" + Request["photoChoice"];
+    }
+}
+
+    <div class="jumbotron">
+        <h1>World Wide Flooring – Irelands leading flooring service</h1>
+        <p>@Html.ActionLink("View Collection", "Index", "Collections")</p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <img src="~/images/pic1.jpg" height="350" width="350" />
+        </div>
+        <div class="col-md-4">
+            <img src="~/images/img2.jpg" height="350" width="350" />
+        </div>
+        <div class="col-md-4">
+            <img src="~/images/img3.jpg" height="350" width="350" />
+        </div>
+
+    </div>
